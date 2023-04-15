@@ -11,11 +11,11 @@ const Nav = () => {
   const [usedbtn, setUsedbtn] = useState('nav--inactive');
   return (
     <nav>
-      <a className={usedbtn === 'nav--inactive' ?  'nav-active' : 'nav--inactive'} href='#home'> <AiOutlineHome/></a>
-      <a className={setUsedbtn} href='#about'> <AiOutlineUser/></a>
-      <a className={setUsedbtn} href='#experience'> <ImBooks/></a>
-      <a className={setUsedbtn} href='#services'> <MdMiscellaneousServices/></a>
-      <a className={setUsedbtn} href='#contact'> <MdOutlineContacts/></a>
+      <a onClick={()=> setUsedbtn('#home')} href='#home' className={usedbtn === '#home' ?  'nav--active' : 'nav--inactive'}> <AiOutlineHome/></a>
+      <a onClick={()=> setUsedbtn('#about')} href='#about' className={usedbtn === '#about' ?  'nav--active' : 'nav--inactive'}> <AiOutlineUser/></a>
+      <a onClick={()=> setUsedbtn('#experience')} href='#experience' className={usedbtn === '#experience' ?  'nav--active' : 'nav--inactive'}> <ImBooks/></a>
+      <a onClick={()=> setUsedbtn('#services')} href='#services' className={usedbtn === '#services' ?  'nav--active' : 'nav--inactive'}> <MdMiscellaneousServices/></a>
+      <a onClick={()=> setUsedbtn('#contact')} href='#contact' className={usedbtn === '#contact' ?  'nav--active' : 'nav--inactive'}> <MdOutlineContacts/></a>
     </nav>
   )
 }
